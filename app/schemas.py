@@ -10,9 +10,11 @@ class CandidateBase(BaseModel):
     years_of_experience: float
     skill_set: str
 
+
 class CandidateResponse(CandidateBase):
     id: int
     resume_file: str
 
-    class Config:
-        orm_mode = True
+    model_config = {
+        "from_attributes": True
+    }

@@ -20,18 +20,17 @@ def get_db():
 
 @router.post("/")
 async def create_candidate(
-    full_name: str = Form(..., example=""),
-    dob: str = Form(..., example=""),
-    contact_number: str = Form(..., example=""),
-    contact_address: str = Form(..., example=""),
-    education: str = Form(..., example=""),
-    graduation_year: int = Form(..., example=""),
-    years_of_experience: float = Form(..., example=""),
-    skill_set: str = Form(..., example=""),
-    resume: UploadFile = File(..., description="Upload PDF/DOC/DOCX file"),
+    full_name: str = Form(...),
+    dob: str = Form(...),
+    contact_number: str = Form(...),
+    contact_address: str = Form(...),
+    education: str = Form(...),
+    graduation_year: int = Form(...),
+    years_of_experience: float = Form(...),
+    skill_set: str = Form(...),
+    resume: UploadFile = File(...),
     db: Session = Depends(get_db)
 ):
-
     file_path = os.path.join(UPLOAD_DIR, resume.filename)
 
     with open(file_path, "wb") as f:

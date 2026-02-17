@@ -8,23 +8,23 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="Mini Resume Management API",
     description="""
-    ## 📋 Resume Management System
+    ## Resume Management System
     
     A lightweight API for managing candidate resumes and profiles.
     
-    ### Features:
-    * **Create Candidates** - Add new candidate profiles with resume uploads
-    * **List Candidates** - Retrieve all candidates with their information
-    * **Get Candidate** - Fetch specific candidate details by ID
-    * **Delete Candidate** - Remove candidate records from the system
+     Features:
+    * Create Candidates - Add new candidate profiles with resume uploads
+    * List Candidates - Retrieve all candidates with their information
+    * Get Candidate - Fetch specific candidate details by ID
+    * Delete Candidate - Remove candidate records from the system
     
-    ### Tech Stack:
+     Tech Stack:
     * FastAPI for high-performance REST API
     * SQLAlchemy ORM for database operations
     * SQLite for data persistence
     * Pydantic for data validation
     
-    ### How it Works:
+     How it Works:
     1. Upload candidate information via POST endpoint
     2. Store resume files in the uploads directory
     3. Manage candidate data through CRUD operations
