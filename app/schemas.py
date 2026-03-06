@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class CandidateBase(BaseModel):
     full_name: str
     dob: str
@@ -14,7 +15,7 @@ class CandidateBase(BaseModel):
 class CandidateResponse(CandidateBase):
     id: int
     resume_file: str
+    resume_url: str | None = None
 
-    model_config = {
-        "from_attributes": True
-    }
+    class Config:
+        from_attributes = True

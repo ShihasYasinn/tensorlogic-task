@@ -23,6 +23,15 @@ A REST API built using FastAPI for managing candidate resumes.
 
 ---
 
+Database
+
+The application uses SQLite for data persistence.
+
+Candidate data including resume file names are stored
+in the `resume.db` database using SQLAlchemy ORM.
+
+
+
 ## Setup Instructions
 
 ### 1. Clone Repository
